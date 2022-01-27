@@ -49,7 +49,7 @@ function game(userPoints = 0, computerPoints = 0, playUntilPoints = 3) {
     }
 } 
 
-alert("Open console (F12 on Mac) to play this game and before ");
+alert("Open console (F12 on Mac) to play this game and before pressing start.");
 
 function startGame() {
 let playUntilPoints = Number(prompt("How many points would you like to play to? Enter a number."));
