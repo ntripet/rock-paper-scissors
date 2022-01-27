@@ -33,7 +33,7 @@ function playRound(userSelection, computerSelection, userPoints, computerPoints)
         }
 }
 
-function game(userPoints = 0, computerPoints = 0) {
+function game(userPoints = 0, computerPoints = 0, playUntilPoints = 3) {
     computerSelection = computerPlay();
     userSelection = prompt("Rock, Paper, or Scissors?"); 
     let gameArray = playRound(userSelection, computerSelection, userPoints, computerPoints);
@@ -43,17 +43,21 @@ function game(userPoints = 0, computerPoints = 0) {
 //Plays until desired points
     if ((gameArray[1] !== playUntilPoints) && (gameArray[2] !== playUntilPoints)) {
     console.log(" ");
-    game (gameArray[1], gameArray[2]);
+    game (gameArray[1], gameArray[2], playUntilPoints);
     } else {
     return;
     }
 } 
 
+alert("Open console (F12 on Mac) to play this game and before ");
+
+function startGame() {
 let playUntilPoints = Number(prompt("How many points would you like to play to? Enter a number."));
 console.log(`Game has begun. Playing to ${playUntilPoints} points.`);
 console.log(" ");
+game(0, 0, playUntilPoints);
+}
 
-game();
 
 
 
